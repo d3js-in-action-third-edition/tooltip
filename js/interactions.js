@@ -44,7 +44,6 @@ const handleMouseEvents = () => {
       console.log(cx, cy);
       d3.select(".tooltip")
         .attr("transform", `translate(${cx - 0.5*tooltipWidth}, ${cy - 1.5*tooltipHeight})`)
-        .transition()
         .style("opacity", 1);
 
     })
@@ -52,9 +51,7 @@ const handleMouseEvents = () => {
 
       // Hide the tooltip and move it away from the chart.
       d3.select(".tooltip")
-        .transition()
-        .style("opacity", 0);
-      d3.select(".tooltip")
+        .style("opacity", 0)
         .attr("transform", `translate(-500, 500)`);
 
     });
