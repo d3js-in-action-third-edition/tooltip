@@ -10,9 +10,8 @@ const createTooltip = () => {
       .attr("height", tooltipHeight)
       .attr("rx", 3)
       .attr("ry", 3)
-      .attr("fill", "white")
-      .attr("stroke", aubergine)
-      .attr("stroke-width", 2);
+      .attr("fill", aubergine)
+      .attr("fill-opacity", 0.75);
   const tooltipText = tooltip
     .append("text")
       .text("00.0°F")
@@ -20,9 +19,8 @@ const createTooltip = () => {
       .attr("y", tooltipHeight/2 + 1)
       .attr("text-anchor", "middle")
       .attr("alignment-baseline", "middle")
-      .style("font-size", "15px")
-      .style("font-weight", 500)
-      .style("fill", aubergine);
+      .style("font-weight", 900)
+      .style("fill", "white");
 
 }
 
